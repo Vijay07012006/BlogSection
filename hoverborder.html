@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoverBorder</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .par {
+            color: red;
+            font-size: 35px;
+            border-bottom-style: groove;
+            border-width: 20px;
+            animation: 0.1s rounder infinite;
+            width: 300px;
+            margin-top: 25%;
+        }
+
+        @keyframes rounder {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                animation: 0.1s rounder2 infinite;
+                border-color: white;
+                background-color: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <div class="container-fluid">
+        <div class="row  text-white">
+            <div class="col-sm-12">
+                <p>
+                <p class="par"></p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
