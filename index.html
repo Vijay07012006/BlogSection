@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Section</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="background-color: black;">
+    <div class="container-fluid">
+        <div class="row  text-white">
+            <div class="col-12 text-center my-4">
+                <h1 class="display-4  fw-bold">Our Blog</h1>
+                <a class="btn btn-primary fw-bold createBlog" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    Create New Blog
+                </a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Write Your Blog</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body text-start">
+                        <div>
+                            <label for="Title">Title</label>
+                            <input type="text" id="Title" class="form-control" placeholder="Enter Title.....">
+                            <br>
+                            <label for="text">Tags</label>
+                            <input type="text" id="Tags" class="form-control" placeholder="Enter Tags.....">
+                            <br>
+                            <label for="Content">Blog</label>
+                            <textarea id="Blog" class="form-control" rows="5"
+                                placeholder="Enter Content....."></textarea>
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-primary save" type="button" onclick="save()">Save Post</button>
+                        </div>
+                        <div id="al"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="post">
+            <!-- Blog entries will be dynamically inserted here -->
+        </div>
+    </div>
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="js/script.js"></script>
+</body>
+
+</html>

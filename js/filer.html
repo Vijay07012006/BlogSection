@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .filter {
+            height: 100px;
+            width: 80vw;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 50px auto;
+            font-size: 20px;
+            /* border: 1px solid white; */
+        }
+
+        .item {
+            color: white;
+            height: 40px;
+            width: 50px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            padding-top: 8px;
+            background-color: red;
+            border-radius: 10px;
+        }
+
+        .item:hover {
+            background-color: #fff;
+            color: red;
+        }
+
+        .box {
+            width: 80vw;
+            height: 300px;
+            display: flex;
+            text-align: center;
+            margin: 50px auto;
+            /* border: 1px solid white; */
+            justify-content: space-evenly;
+        }
+
+        .card {
+            height: 200px;
+            width: 150px;
+            border: 1px solid red;
+            margin-top: 20px;
+            color: black;
+            font-size: 25px;
+            background-color: #fff;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filter">
+        <div class="item all" onclick="fun('ALL')">ALL</div>
+        <div class="item a" onclick="fun('A')">A</div>
+        <div class="item b" onclick="fun('B')">B</div>
+        <div class="item c" onclick="fun('C')">C</div>
+    </div>
+    <div class="box">
+        <div class="card a">A</div>
+        <div class="card b">B</div>
+        <div class="card c">C</div>
+        <div class="card a">A</div>
+        <div class="card b">B</div>
+        <div class="card c">C</div>
+    </div>
+    <script>
+        function fun(d) {
+            let cards = document.querySelectorAll('.card');
+
+            cards.forEach((card) => {
+
+                if (d === "ALL") {
+                    card.classList.remove("hide");
+                }
+                else if (card.classList.contains(d.toLowerCase())) {
+                    card.classList.remove("hide");
+                }
+                else {
+                    card.classList.add("hide");
+                }
+
+            });
+
+            
+        }
+    </script>
+</body>
+
+</html>
